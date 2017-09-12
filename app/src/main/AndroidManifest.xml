@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tech.abhinav.buzzer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.tech.abhinav.buzzer.Profile.LoginActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name="com.tech.abhinav.buzzer.Timeline.PostActivity" />
+        <activity android:name="com.tech.abhinav.buzzer.Profile.RegisterActivity" />
+        <activity android:name="com.tech.abhinav.buzzer.Timeline.MainActivity"></activity>
+        <activity android:name="com.tech.abhinav.buzzer.Event.EventListActivity" />
+        <activity android:name="com.tech.abhinav.buzzer.Utility.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tech.abhinav.buzzer.Profile.SetupActivity" />
+        <activity android:name="com.tech.abhinav.buzzer.Timeline.HomeSingleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="buzzer.com"
+                    android:scheme="http" />
+                <data android:pathPattern="." />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tech.abhinav.buzzer.Timeline.LikedActivity" />
+        <activity android:name="com.tech.abhinav.buzzer.Profile.ProfileActivity" />
+        <activity android:name="com.tech.abhinav.buzzer.College.CollegeListActivity" />
+        <activity android:name="com.tech.abhinav.buzzer.College.CollegeListActivity2" />
+        <activity android:name="com.tech.abhinav.buzzer.Comment.CommentListActivity" />
+        <activity android:name="com.tech.abhinav.buzzer.Profile.ProfileSeeActivity" />
+        <activity android:name="com.tech.abhinav.buzzer.Event.EventTimeline" />
+        <activity android:name="com.tech.abhinav.buzzer.Profile.ProfilePhotoSelector" />
+
+        <service android:name="com.tech.abhinav.buzzer.FirebaseMessaging.MyFirebaseInstance">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.tech.abhinav.buzzer.FirebaseMessaging.MyFirebaseMessaging">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.tech.abhinav.buzzer.College.CollegePhotoSelector" />
+        <activity android:name="com.tech.abhinav.buzzer.Utility.AboutActivity" />
+        <activity android:name="com.tech.abhinav.buzzer.Profile.PhoneAuthActivity" />
+    </application>
+
+</manifest>
